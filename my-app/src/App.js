@@ -21,7 +21,7 @@ const App = () => {
       const parsedJson = JSON.parse(jsonInput);
       
       // Call the REST API
-      const response = await axios.post('http://localhost:8000/bfhl', { data: parsedJson.data });
+      const response = await axios.post('https://bajaj-project-backend.onrender.com/bfhl', { data: parsedJson.data });
       setResponseData(response.data);
       setSelectedOptions([]);
     } catch (error) {
